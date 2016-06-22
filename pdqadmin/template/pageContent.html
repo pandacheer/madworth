@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="<?php echo $template ?>">
+        <title>Discountscontent</title>
+        <meta charset="UTF-8" />
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.css" />	
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/unicorn.css" />
+        <link rel="stylesheet" href="css/summernote.css" />
+        <link rel="stylesheet" href="css/paddy.css" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+        <![endif]-->
+
+    </head>	
+    <body data-color="grey" class="flat">F
+        <div id="wrapper">
+            <div id="header">
+                <h1><a href="./index.html">Shopify</a></h1>	
+                <a id="menu-trigger" href="#"><i class="fa fa-bars"></i></a>	
+            </div>
+
+            <div id="user-nav">
+                <ul class="btn-group">
+                    <li class="btn" ><a title="" href="#"><i class="fa fa-user"></i> <span class="text">Profile</span></a></li>
+                    <li class="btn dropdown" id="menu-messages">
+                        <a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle">
+                            <i class="fa fa-envelope"></i> 
+                            <span class="text">Messages</span> 
+                            <span class="label label-danger">5</span> 
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu messages-menu">
+                            <li class="title">
+                                <i class="fa fa-envelope-alt"></i>Messages
+                                <a class="title-btn" href="#" title="Write new message"><i class="fa fa-share"></i></a>
+                            </li>
+                            <li class="message-item">
+                                <a href="#">
+                                    <img alt="User Icon" src="img/demo/av1.jpg" />
+                                    <div class="message-content">
+                                        <span class="message-time">3 mins ago</span>
+                                        <span class="message-sender">Nunc Cenenatis</span>
+                                        <span class="message">Hi, can you meet me at the office tomorrow morning?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-item">
+                                <a href="#">
+                                    <img alt="User Icon" src="img/demo/av1.jpg" />
+                                    <div class="message-content">
+                                        <span class="message-time">3 mins ago</span>
+                                        <span class="message-sender">Nunc Cenenatis</span>
+                                        <span class="message"> Hi, can you meet me at the office tomorrow morning?</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-item">
+                                <a href="#">
+                                    <img alt="User Icon" src="img/demo/av1.jpg" />
+                                    <div class="message-content">
+                                        <span class="message-time">3 mins ago</span>
+                                        <span class="message-sender"> Nunc Cenenatis </span>
+                                        <span class="message">Hi, can you meet me at the office tomorrow morning?</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn"><a title="" href="#"><i class="fa fa-cog"></i> <span class="text">Settings</span></a></li>
+                    <li class="btn"><a title="" href="login.html"><i class="fa fa-share"></i> <span class="text">Logout</span></a></li>
+                </ul>
+            </div>
+
+            <div id="sidebar">
+                <div id="search">
+                    <input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="fa fa-search"></i></button>
+                </div>	
+                <ul>
+                    <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                    <li>
+                        <a href="orders.html">
+                            <i class="glyphicon glyphicon-check" aria-hidden="true"></i><span>Orders</span>
+                        </a>
+                    </li>					
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-tags"></i> <span>Products</span> <i class="arrow fa fa-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="ProductList.html">Product List</a></li>
+                            <li><a href="#">Inventory</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Customers.html"><i class="fa fa-users"></i> <span>Customers</span></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-signal"></i> <span>Reports</span></a></li>
+                    <li><a href="Discounts.html"><i class="fa fa-scissors"></i> <span>Discounts</span></a></li>
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-th-list"></i> <span>Online Store</span> <i class="arrow fa fa-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Blog Posts</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#">Navigation</a></li>
+                            <li><a href="#">Domains</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="creatediscount.html"><i class="fa fa-asterisk"></i> <span>Apps</span></a></li>
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-cog fa-fw"></i> <span>Settings</span> <i class="arrow fa fa-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Payments</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Taxes</a></li>
+                            <li><a href="#">Notifications</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Sales Channels</a></li>
+                            <li><a href="#">Online Store</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="charts.html"><i class="fa fa-signal"></i> <span>Charts &amp; graphs</span></a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="content">
+                <div id="content-header" class="mini">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+                            <h1><i class="glyphicon glyphicon-check" aria-hidden="true"></i>About Free Shipping</h1>
+                        </div>	
+                        <!--div class="col-xs-12 col-sm-6 col-lg-6">
+                            <div class="text-right">
+                                <button type="button" class="btn btn-default btn-bgcolor-white">Cancel</button>
+                                <button type="button" class="btn btn-default btn-bgcolor-blue">Save discount</button>
+                            </div>	
+                        </div-->	
+                    </div>
+
+                </div>
+                <div id="breadcrumb">
+                    <a href="/admin/products" title="Go to Discounts List" class="tip-bottom"><i class="fa fa-tags"></i> Online Store </a>
+                    <a href="#" class="current">Pages</a>
+                    <a href="#" class="current">About Free Shipping</a>
+                </div>
+                <div class="row AboutFreeShipping">
+                    <form method="post" action="<?php echo site_url('coupons/insert') ?>" target="_black">
+                        <div class="discountscontent-box discountscontent-box-daterange">
+                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                <div class="discountscontent-box-left">
+                                    <h4>Write your page</h4>
+                                    <h6 class="subdued discountscontent-box-left-Create">Give your page a title and add youe page content.</h6>
+                                </div>
+                            </div>  
+                            <div class="col-xs-12 col-sm-9 col-lg-9">
+                                <div class="discountscontent-box-right">
+                                    <h5><b>Title</b></h5>
+                                    <input type="text" class="form-control" id="page-title" placeholder="e.g. Contact us, Sizing chart, FAQs" />
+                                    <h5><b>Content</b></h5>
+                                    <div class="summernote"><p>Write <b>page content</b></p></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="discountscontent-box">
+                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                <div class="discountscontent-box-left">
+                                    <h4>Search engines</h4>
+                                    <h6 class="subdued discountscontent-box-left-Create">Set up the page title. meta description and handle.These help define how this page shows up on search engines.</h6>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-lg-9">
+                                <div class="discountscontent-box-right">
+                                    <h5><b>Page title</b><span>19 of 60 characters used</span></h5>
+                                    <input type="text" class="form-control" id="page-title-seo" placeholder="About Free Shipping" />
+                                    <h5><b>Meta description</b><span>160 of 160 characters used</span></h5>
+                                    <textarea class="form-control" id="page-description" rows="3"></textarea>
+                                    <h5><b>URL & Handle</b><span class="fa fa-question-circle"></span></h5>
+                                    <div class="input-group nopadding">
+                                      <div class="input-group-addon">http://www.drgrab.com/</div>
+                                      <input type="text" class="form-control" id="page-url-seo" placeholder="AboutFreeShipping">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="discountscontent-box discountscontent-box-daterange">
+                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                <div class="discountscontent-box-left">
+                                    <h4>Visibility</h4>
+                                    <h6 class="subdued discountscontent-box-left-Create">Control if this page can be viewed on your storefront.</h6>
+                                </div>
+                            </div>	
+                            <div class="col-xs-12 col-sm-9 col-lg-9">
+                                <div class="discountscontent-box-right">
+                                    <div class="row">
+                                        <input type="radio" name="page"> Visible <span>(as of 2015-07-07 11:27am WST)</span>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio" name="page"> Hidden
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <button class="btn btn-default btn-bgcolor-white">Delete this page</button>
+                            </div>
+                            <div class="col-lg-9 text-right">
+                                    <button type="button" class="btn btn-default btn-bgcolor-white">Cancel</button>
+                                    <button type="sumbit" class="btn btn-default btn-bgcolor-blue">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>	
+            </div>
+            <div class="row">
+                <div id="footer" class="col-xs-12"></div>
+            </div>
+        </div>
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.custom.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.tagsinput.js"></script>
+        <!--左侧nav-->
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/unicorn.js"></script>
+
+        <script src="js/unicorn.jui.js"></script>
+        <!--文本编辑器-->
+        <script src="js/summernote.js"></script>
+        <script type="text/javascript">
+            $(function() {
+              $('.summernote').summernote({
+                height: 280,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['table', ['table']]
+                 ]
+              });
+              $("#page-title").bind('keyup',function(){
+                    $val = $(this).val();
+                    $("#page-title-seo").val($val.substr(0,60));
+                    $("#page-url-seo").val($val.replace(/\s+/g,'-').substr(0,60));
+                });
+                $("#page-url-seo").on('blur',function(){
+                    $(this).attr('id','asdf');
+                });
+                $('.summernote').on('summernote.keyup',function(){
+                    $('#page-description').text(($(this).code()).replace(/<.+?>/gi , "").substr(0,160));
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+	<script>
+	function format(state) {
+		var originalOption = state.element;
+		return "<img class='flag' src='img/flag/" + state.id.toLowerCase() + ".png' alt='" + state.id.toLowerCase() + "' />" + state.text;
+	}
+	$(".js-templating").select2({
+		formatResult: format,
+		formatSelection: format,
+		escapeMarkup: function(m){return m;}
+	});
+	</script>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DeliveryMethod</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />	
+		<link rel="stylesheet" href="css/unicorn.css" />
+		<link rel="stylesheet" href="css/paddy.css" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<![endif]-->
+			
+	</head>	
+	<body data-color="grey" class="flat">
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myLargeModalLabel">Delivery Method</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="form-group col-lg-12 col-ms-12 col-xs-12">
+						<label for="inputid">Shipping rate name</label>
+						<input type="text" class="form-control" id="inputid">
+					</div>
+
+
+                    <script src="js/jquery.min.js"></script>
+                    <script>
+                    	$(function(){
+                    		$("#Criteria").on('change',function(){
+                    			//$('#weight-price-rang').hide();
+                    			$val = $(this).val();
+                    			switch($val){
+                    				case '1':
+                    					$('#weight-price-rang label').text('Weight rang');
+                    					$('#weight-price-rang input').eq(0).val('0.0kg');
+                    					$('#weight-price-rang input').eq(1).val('25.0kg');
+                    					break;
+                    				case '2':
+                    					$('#weight-price-rang label').text('Price rang');
+                    					$('#weight-price-rang input').eq(0).val('$50.00');
+                    					$('#weight-price-rang input').eq(1).val('$100.00');
+                    					break;
+                    			};
+                    		});
+                    	});
+                    </script>
+					<div class="form-group col-lg-12 col-ms-12 col-xs-12 nopadding Criteria">
+						<div class="col-lg-5">
+							<label for="Criteria">Criteria</label>
+							<select class="form-control" name="" id="Criteria">
+								<option value="1">Based on order weight</option>
+								<option value="2">Based on order price</option>
+							</select>
+						</div>
+						<div class="col-lg-1 text-center">
+							<i class="fa fa-long-arrow-right"></i>
+						</div>
+						<div class="col-lg-6" id="weight-price-rang">
+							<label>Weight rang</label>
+							<div class="row col-lg-12 col-ms-12 col-xs-12 nopadding">
+								<div class="col-lg-5 nopadding">
+									<input type="text" class="form-control" placeholder="$" value="0.0kg" />
+								</div>
+								<div class="col-md-2 text-center"><i class="fa fa-minus"></i></div>
+								<div class="col-lg-5 nopadding">
+									<input type="text" class="form-control" placeholder="$" value="25.0kg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-ms-6 col-xs-12 ">
+						<label for="price">Shipping price</label>
+						<input type="text" class="form-control" id="price" placeholder="$0.00" />
+					</div>
+					<div class="row col-lg-12 col-ms-12 col-xs-12 text-right">
+						<button class="btn btn-ms btn-default" data-dismiss="modal">Close</button>
+						<button class="btn btn-ms btn-info">Save Change</button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div id="wrapper">
+			<div id="header">
+				<h1><a href="./index.html">Shopify</a></h1>	
+				<a id="menu-trigger" href="#"><i class="fa fa-bars"></i></a>	
+			</div>
+		
+			<div id="user-nav">
+	            <ul class="btn-group">
+	                <li class="btn" ><a title="" href="#"><i class="fa fa-user"></i> <span class="text">Profile</span></a></li>
+	                <li class="btn dropdown" id="menu-messages">
+						<a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle">
+							<i class="fa fa-envelope"></i> 
+							<span class="text">Messages</span> 
+							<span class="label label-danger">5</span> 
+							<b class="caret"></b>
+						</a>
+	                    <ul class="dropdown-menu messages-menu">
+	                        <li class="title">
+								<i class="fa fa-envelope-alt"></i>Messages
+								<a class="title-btn" href="#" title="Write new message"><i class="fa fa-share"></i></a>
+							</li>
+	                        <li class="message-item">
+	                        	<a href="#">
+		                            <img alt="User Icon" src="img/demo/av1.jpg" />
+		                            <div class="message-content">
+		                            	<span class="message-time">3 mins ago</span>
+		                                <span class="message-sender">Nunc Cenenatis</span>
+		                                <span class="message">Hi, can you meet me at the office tomorrow morning?</span>
+		                            </div>
+	                        	</a>
+	                        </li>
+	                        <li class="message-item">
+								<a href="#">
+		                            <img alt="User Icon" src="img/demo/av1.jpg" />
+		                            <div class="message-content">
+		                            	<span class="message-time">3 mins ago</span>
+		                                <span class="message-sender">Nunc Cenenatis</span>
+		                                <span class="message"> Hi, can you meet me at the office tomorrow morning?</span>
+		                            </div>
+	                        	</a>
+	                        </li>
+	                        <li class="message-item">
+								<a href="#">
+		                            <img alt="User Icon" src="img/demo/av1.jpg" />
+		                            <div class="message-content">
+		                            	<span class="message-time">3 mins ago</span>
+		                                <span class="message-sender"> Nunc Cenenatis </span>
+		                                <span class="message">Hi, can you meet me at the office tomorrow morning?</span>
+		                            </div>
+	                        	</a>
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li class="btn"><a title="" href="#"><i class="fa fa-cog"></i> <span class="text">Settings</span></a></li>
+	                <li class="btn"><a title="" href="login.html"><i class="fa fa-share"></i> <span class="text">Logout</span></a></li>
+	            </ul>
+	        </div>
+
+			<div id="sidebar">
+				<div id="search">
+					<input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="fa fa-search"></i></button>
+				</div>	
+				<ul>
+					<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a></li>
+					<li>
+						<a href="orders.html">
+							<i class="glyphicon glyphicon-check" aria-hidden="true"></i><span>Orders</span>
+						</a>
+					</li>					
+					<li class="submenu">
+						<a href="#"><i class="fa fa-tags"></i> <span>Products</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="ProductList.html">Product List</a></li>
+							<li><a href="#">Inventory</a></li>
+							<li><a href="#">Collections</a></li>
+							<li><a href="#">Gift Cards</a></li>
+						</ul>
+					</li>
+					<li><a href="Customers.html"><i class="fa fa-users"></i> <span>Customers</span></a></li>
+					<li><a href="#"><i class="glyphicon glyphicon-signal"></i> <span>Reports</span></a></li>
+					<li><a href="Discounts.html"><i class="fa fa-scissors"></i> <span>Discounts</span></a></li>
+					<li class="submenu">
+						<a href="#"><i class="fa fa-th-list"></i> <span>Online Store</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="#">Overview</a></li>
+							<li><a href="#">Blog Posts</a></li>
+							<li><a href="#">Pages</a></li>
+							<li><a href="#">Themes</a></li>
+							<li><a href="#">Navigation</a></li>
+							<li><a href="#">Domains</a></li>
+						</ul>
+					</li>
+					<li><a href="creatediscount.html"><i class="fa fa-asterisk"></i> <span>Apps</span></a></li>
+					<li class="submenu">
+						<a href="#"><i class="fa fa-cog fa-fw"></i> <span>Settings</span> <i class="arrow fa fa-chevron-right"></i></a>
+						<ul>
+							<li><a href="#">General</a></li>
+							<li><a href="#">Payments</a></li>
+							<li><a href="#">Checkout</a></li>
+							<li><a href="#">Shipping</a></li>
+							<li><a href="#">Taxes</a></li>
+							<li><a href="#">Notifications</a></li>
+							<li><a href="#">Gift Cards</a></li>
+							<li><a href="#">Files</a></li>
+							<li><a href="#">Account</a></li>
+							<li><a href="#">Sales Channels</a></li>
+							<li><a href="#">Online Store</a></li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="charts.html"><i class="fa fa-signal"></i> <span>Charts &amp; graphs</span></a>
+					</li>
+				</ul>
+			
+			</div>
+			
+			<div id="content">
+				<div id="content-header" class="mini">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-lg-6">
+							<h1><i class="glyphicon glyphicon-plane" aria-hidden="true"></i>Shipping Methods</h1>
+						</div>	
+	
+				  </div>
+					
+				</div>
+
+				<div class="row method-list">
+					<div class="dg-main-account-content col-xs-12 col-sm-12 col-lg-12">
+		                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		                  <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingOne">
+		                      <a class="dg-main-account-content-order-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		                        <h3 class="panel-title">
+		                        	<img src="img/flag/AU.png" /> Australia
+		                            <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+		                        </h3>
+		                      </a>
+		                    </div>
+		                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+		                      <div class="panel-body">
+		                        	<table class="table table-hover table-bordered">
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Express Post(7-12business days)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$4.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free</span></td>
+		                    			<td>$0.00-$0.10</td>
+		                    			<td>$7.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free Express Shipping</span></td>
+		                    			<td>50.0kg - 50.0kg</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Standard Shipping(3-4weeks)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    	</table>
+		                        	<div>
+										<button type="button" class="btn btn-default addDeliveryMethod" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus"></i> Add Delivery Method</button>
+									</div>
+		                      </div>
+		                    </div>
+		                </div>
+		                <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+		                      <a class="collapsed dg-main-account-content-order-title" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		                        <h3 class="panel-title">
+		                            <img src="img/flag/IE.png" /> Ireland
+		                            <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+		                        </h3>
+		                      </a>
+		                    </div>
+		                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		                      <div class="panel-body">
+		                        <table class="table table-hover table-bordered">
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Express Post(7-12business days)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$4.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free</span></td>
+		                    			<td>$0.00-$0.10</td>
+		                    			<td>$7.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free Express Shipping</span></td>
+		                    			<td>50.0kg - 50.0kg</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Standard Shipping(3-4weeks)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    	</table>
+	                        	<div>
+									<button type="button" class="btn btn-default addDeliveryMethod" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus"></i> Add Delivery Method</button>
+								</div>
+		                      </div>
+		                    </div>
+		                </div>
+		                <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingThree">
+		                      <a class="collapsed dg-main-account-content-order-title" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		                        <h3 class="panel-title">
+		                          <img src="img/flag/CA.png" /> Canada
+		                          <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+		                        </h3>
+		                      </a>
+		                    </div>
+		                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+		                      <div class="panel-body">
+		                        <table class="table table-hover table-bordered">
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Express Post(7-12business days)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$4.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free</span></td>
+		                    			<td>$0.00-$0.10</td>
+		                    			<td>$7.99</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Free Express Shipping</span></td>
+		                    			<td>50.0kg - 50.0kg</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    		<tr>
+		                    			<td><span class="button" data-toggle="modal" data-target=".bs-example-modal-lg">Standard Shipping(3-4weeks)</span></td>
+		                    			<td>$1.00 - $5,000.00</td>
+		                    			<td>$0.00</td>
+		                    		</tr>
+		                    	</table>
+	                        	<div>
+									<button type="button" class="btn btn-default addDeliveryMethod" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus"></i> Add Delivery Method</button>
+								</div>
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>                
+	              	</div>
+					<div class="clearfix"></div>
+				</div>	
+			</div>
+			<div class="row">
+				<div id="footer" class="col-xs-12"></div>
+			</div>
+		</div>
+
+		<!-- Large modal -->
+
+		
+		<script src="js/jquery-ui.custom.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--左侧nav-->
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/unicorn.js"></script>
+
+		<script>
+		$(function(){
+			
+		});
+		</script>
+	</body>
+</html>
